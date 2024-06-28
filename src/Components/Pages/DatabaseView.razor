@@ -1,0 +1,33 @@
+﻿@page "/database-view"
+@inject ICourseService courseService;
+@rendermode InteractiveServer
+
+<PageTitle>@title</PageTitle>
+
+<h1>Database View</h1>
+
+<div class="table-container">
+    <table class="table table-striped table-hover table-bordered">
+        <thead>
+            <tr>
+                <th scope="col" style="width:350px;">Id</th>
+                <th scope="col" style="width:200px;">Name</th>
+                <th scope="col" style="width:100px;">Sku</th>
+                <th scope="col">Description</th>
+                <th scope="col">Embedding</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Course course in Courses)
+            {
+                <tr style="height:150px;">
+                    <th scope="row">@course.Id</th>
+                    <td>@course.Name</td>
+                    <td>@course.Sku</td>
+                    <td style="overflow-y:scroll;">@course.Description</td>
+                    <td style="overflow-y:scroll;">@course.Embedding</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,31 @@
+﻿@page "/embed"
+@inject IEmbeddingService embeddingService;
+@rendermode InteractiveServer
+
+<PageTitle>@title</PageTitle>
+
+<h1>Text Embedding</h1>
+
+<p>Enter any text into the text field below and click the Embed button to invoke the <strong>Titan Text Embedding V2</strong> model to return an embedding for that text.</p>
+
+<textarea type="text" placeholder="Enter text to be embedded here..." @bind="input" /><br />
+<button type="submit" class="btn btn-primary" @onclick="() => OnClickedAsync()">
+    @if (embedding)
+    {
+        <div class="spinner-border" role="status">
+            <span class="sr-only"></span>
+        </div>
+    }
+    else
+    {
+        <span>Embed</span>
+    }
+</button>
+
+
+@if (!string.IsNullOrEmpty(embeddingResult))
+{
+    <div class="result-container">
+        <p>@embeddingResult</p>
+    </div>
+}

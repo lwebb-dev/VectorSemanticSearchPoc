@@ -1,0 +1,9 @@
+.vs/
+bin/Debug/
+obj/Docker
+obj/Debug/
+src/obj/
+src/bin/
+appsettings.Development.json
+*.map
+.env

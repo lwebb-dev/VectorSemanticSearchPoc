@@ -1,0 +1,17 @@
+﻿.table-container {
+    height: 75vh;
+    width: 80vw;
+    overflow: scroll;
+}
+
+.table-cell-description {
+    overflow-y: scroll;
+}
+
+th {
+    padding-left: 15px;
+}
+
+td {
+    padding-left: 15px;
+}

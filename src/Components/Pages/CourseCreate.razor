@@ -1,0 +1,40 @@
+﻿@page "/course-create"
+@inject IEmbeddingService embeddingService;
+@inject ICourseService courseService;
+@rendermode InteractiveServer
+
+<PageTitle>@title</PageTitle>
+
+<h1>Course Create</h1>
+
+<form>
+    <div class="mb-3">
+        <label for="courseNameInput" class="form-label">Name</label>
+        <input type="text" id="courseNameInput" class="form-control" @bind="formData.Name" required />
+    </div>
+    <div class="mb-3">
+        <label for="courseSkuInput" class="form-label">Sku</label>
+        <input type="text" id="courseSkuInput" class="form-control" @bind="formData.Sku" required />
+    </div>
+    <div class="mb-3">
+        <label for="couseDescriptionInput" class="form-label">Description</label>
+        <textarea type="text" id="couseDescriptionInput" class="form-control" @bind="formData.Description" />
+    </div>
+    <button type="submit" class="btn btn-primary" @onclick="() => OnClickedAsync()">
+        @if (creating)
+        {
+            <div class="spinner-border" role="status">
+                <span class="sr-only"></span>
+            </div>
+        }
+        else
+        {
+            <span>Create</span>
+        }
+    </button>
+
+    @if (CourseCreated)
+    {
+        <p style="color:green">{result.CoursesAdded[0].Sku} Created!</p>
+    }
+</form>

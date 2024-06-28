@@ -1,0 +1,32 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Vector Semantic Search Proof of Concept</h1>
+
+How to use this PoC Blazor application:
+
+<h2>Embedding</h2>
+
+Use this page to see the <strong>Titan Text Embedding V2</strong> model at work. This model can support up to 1024 dimensions, but for the purpose of this application has been scaled back to 256 dimensions.
+
+<h2>Course Create</h2>
+
+Simple form for inputting basic course data. The embedding for this data is automatically created using the Course Name + Description as the input text.
+
+<h2>Database View</h2>
+<p>Quick and easy way to see what course data is currently in your postgres pgvector database (including the embeddings).</p>
+
+<h2>Semantic Search</h2>
+<p>
+    Watch all the pieces come together. Input a semantic (human language) query as if you were personally asking the database a question.
+    You will receive the top 5 most relevant courses from the database, ordered by their embedding's L2Distance from the prompt you submitted (which subsequently was also embedded using the same Titan model).
+</p>
+
+<h4>Example Search Queries:</h4>
+<ul>
+    <li>How to I become an Apple Developer?</li>
+    <li>I want to learn about elektrisity</li>
+    <li>what do i do during a school shooting?</li>
+    <li>I JUST WANT SOMETHING TO READ WHY AM I YELLING</li>
+</ul>

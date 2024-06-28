@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VectorSemanticSearchPoc", "src\VectorSemanticSearchPoc.csproj", "{213FB2A0-AEE0-4FA7-AAE5-F5B645CBA964}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{531B6D1A-645C-4B43-87F1-3BD7623AD6B7}"
+	ProjectSection(SolutionItems) = preProject
+		.env = .env
+		.gitignore = .gitignore
+		docker-compose.yml = docker-compose.yml
+		README.md = README.md
+		[.env]template.txt = [.env]template.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{213FB2A0-AEE0-4FA7-AAE5-F5B645CBA964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{213FB2A0-AEE0-4FA7-AAE5-F5B645CBA964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{213FB2A0-AEE0-4FA7-AAE5-F5B645CBA964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{213FB2A0-AEE0-4FA7-AAE5-F5B645CBA964}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D90AABA-F313-43B2-83ED-3D286259E2BA}
+	EndGlobalSection
+EndGlobal
