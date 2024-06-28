@@ -51,11 +51,9 @@ and by using docker compose, it includes and runs `~/docker/pgvector.init.sql` w
 
 ## Build Application
 
-1. Using Visual Studio, open VectorSemanticSearchPoc.sln.
-2. Apply the latest Entity Framework migrations by running `Update-Database` in the Package Manager Console while your postgres database is running.
-3. Rebuild the solution, esnure there are no build errors.
-4. If using the included Docker Postgres database implementation, run `docker compose up -d` from the repository root directory. Ensure the database container starts without error.
+1. If using the included Docker Postgres database implementation, run `docker compose up -d` from the repository root directory. Ensure the database container starts without error.
+2. Using Visual Studio, open VectorSemanticSearchPoc.sln.
+3. Apply the latest Entity Framework migrations by running `Update-Database` in the Package Manager Console while your postgres database is running.
+4. Rebuild the solution, esnure there are no build errors.
 5. Debug the application in Visual Studio using the `https` launch profile (you will likely be prompted by windows to generate a self-signed cert, simply allow this and continue).
 6. The Blazor app should now be running at `https://localhost:7061`.
-
-![](docs/samplesearch.jpg)
